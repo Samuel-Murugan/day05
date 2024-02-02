@@ -46,17 +46,34 @@ let myResume=[{
     ],
     "languages": [
       {
-        "language": "Tamil,Enlish",
+        "language": "Tamil,English",
       }
     ],
     
   }
-  console.log(myResume);
+
 ]
-//Q 2 for the above JSON resume iterate for in loop
+//Q 2 for the above JSON resume iterate 
+//for in loop
 // Ans 
  for (var key in myResume) {
       console.log(myResume[key].education.department);
       console.log(myResume[key].basics.name);
       console.log(myResume[key].profiles.github)
  }
+ // for loop 
+ // ans 
+ for(var i = 0;i <myResume.length;i++){
+  var obj =myResume[i];
+  console.log(obj.skills.name);
+  console.log(obj.languages.language)
+ }
+ // for -of loop
+ // ans
+for(var key of Object.keys(myResume)){
+  console.log(`values:${myResume[key]}`)
+
+}
+// for -each loop
+//ans
+Object.values(myResume).forEach((ele)=>console.log(ele))
